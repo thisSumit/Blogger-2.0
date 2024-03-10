@@ -6,7 +6,7 @@ import { FaEdit } from "react-icons/fa";
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('https://blogger-api-brown.vercel.app/profile', {
+    fetch('https://mernblog-api-delta.vercel.app/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -16,7 +16,7 @@ export default function Header() {
   }, []);
 
   function logout() {
-    fetch('https://blogger-api-brown.vercel.app/logout', {
+    fetch('https://mernblog-api-delta.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
     });
