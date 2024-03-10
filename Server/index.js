@@ -16,7 +16,7 @@ const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
 app.use(cors(
     {
-        origin: ["https://blogger.vercel.app"],
+        origin: ["https://bloggerz-three.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
