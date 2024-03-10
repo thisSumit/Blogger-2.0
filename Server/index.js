@@ -23,7 +23,7 @@ const corsConfig={
 app.use(cors(
     {
         origin: ["https://bloggerz-three.vercel.app"],
-        methods: ["GET", "POST", "PUT", "DELETE"]
+        methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
 ));
