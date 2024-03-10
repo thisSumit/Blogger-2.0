@@ -6,7 +6,7 @@ import { FaEdit } from "react-icons/fa";
 export default function Header() {
   const {setUserInfo,userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://blogger-api-brown.vercel.app/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
