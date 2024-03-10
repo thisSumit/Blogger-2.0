@@ -10,7 +10,7 @@ export default function PostPage() {
   const {userInfo} = useContext(UserContext);
   const {id} = useParams();
   useEffect(() => {
-    fetch(`https://blogger-api-brown.vercel.app/post/${id}`)
+    fetch(`https://mernblog-api-delta.vercel.app/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
@@ -31,7 +31,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`https://blogger-api-brown.vercel.app/${postInfo.cover}`} alt=""/>
+        <img src={`https://mernblog-api-delta.vercel.app/${postInfo.cover}`} alt=""/>
       </div>
       <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>
