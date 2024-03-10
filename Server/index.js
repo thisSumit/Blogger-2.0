@@ -14,10 +14,16 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
+const corsConfig={
+    origin: true,
+    credential: true,
+    methods: ["GET", "POST", "PUT", "DELETE"]
+}
+
 app.use(cors(
     {
         origin: ["https://bloggerz-three.vercel.app"],
-        methods: ["POST", "GET"],
+        methods: ["GET", "POST", "PUT", "DELETE"]
         credentials: true
     }
 ));
